@@ -14,12 +14,12 @@ this document supplies the evidence and the recommendation.
 
 | # | Feature | Recommendation |
 |---|---------|----------------|
-| 1 | Motivation Mode | **MVP — with a mandatory reframe** ("Brutally Honest" → "Direct", plus content guardrails) |
+| 1 | Motivation Mode | **MVP — with a mandatory reframe**: the challenging voice keeps the behavioral contract (challenge behavior, never the person); naming alternatives explored in `ToneNamingExploration.md` (provisional recommendation: "Voices" — The Coach / The Friend) |
 | 2 | Time Awareness Widget | **MVP — the product's identity**, with platform-driven design constraints |
 | 3 | Speak Time | **MVP-candidate on Android; constrained variant on iOS.** Feasibility spike required before commitment |
-| 4 | Quote Engine | **Demote: not a feature, a content system** serving features 1–3. Generic quotes rejected |
+| 4 | Quote Engine | **Reframe as the Content Engine**: a tone-aware content system serving features 1–3, in which quotes are one content type among several. Generic-quote-only version rejected |
 | 5 | Start Now | **MVP — the behavioral core.** Highest evidence strength of all six |
-| 6 | Future ideas | **Research-only confirmed.** Two flagged as promising, two flagged as dangerous |
+| 6 | Future ideas | Mostly parked/declined; **Death Clock / Memento Mori recast as an optional, off-by-default philosophy pack** ("The Stoic") with mandatory ethics guardrails; regret simulation remains rejected |
 
 ---
 
@@ -42,15 +42,20 @@ stuck in the guilt spiral.
 
 ### The reframe we recommend
 
-Keep the two-mode architecture. Rename and redefine the poles:
+Keep the two-voice architecture. Redefine the poles (the behavioral contract
+is binding; the labels are explored in `ToneNamingExploration.md`, with a
+provisional recommendation of a "Voices" system: **The Coach** and **The
+Friend**):
 
-- **Direct** (not "Brutal"): concise, concrete, zero praise-padding,
-  challenge-oriented. Targets the *behavior and the moment*, never the
-  person. "It's 14:00. The report hasn't started itself. 120 seconds — go."
-- **Gentle**: warm, permission-giving, self-compassion-informed. "It's 14:00.
-  Starting badly is allowed. Two minutes is enough."
+- **The challenging voice ("The Coach", provisional):** concise, concrete,
+  zero praise-padding, challenge-oriented. Targets the *behavior and the
+  moment*, never the person. "It's 14:00. The report hasn't started itself.
+  120 seconds — go."
+- **The nurturing voice ("The Friend", provisional):** warm,
+  permission-giving, self-compassion-informed. "It's 14:00. Starting badly
+  is allowed. Two minutes is enough."
 
-**Hard content rules for Direct mode** (full rationale in
+**Hard content rules for the challenging voice** (full rationale in
 `EthicalConsiderations.md` §3): no identity attacks ("you're lazy"), no
 catastrophizing, no comparisons to others, no accumulated-failure references,
 no profanity-as-edge. Directness is a *style*; contempt is a *harm*.
@@ -58,24 +63,24 @@ no profanity-as-edge. Directness is a *style*; contempt is a *harm*.
 ### Assessment grid
 
 - **Strengths:** True differentiator; doubles perceived personalization for
-  the cost of a copy system; marketing hook ("the app that talks to you the
-  way you want to be talked to").
+  the cost of a copy system; marketing hook ("choose who talks to you about
+  time").
 - **Weaknesses:** Doubles all content authoring/review/localization cost;
-  risk of caricature in Direct mode; mode choice at onboarding is made in a
-  motivated state that may not match later low states.
+  risk of caricature in the challenging voice; voice choice at onboarding is
+  made in a motivated state that may not match later low states.
 - **Implementation complexity: Low–Medium.** A tone dimension on every string
   + themed palette. Must be architected from day one (string catalog keyed by
   tone) — retrofitting would be expensive. No backend needed.
-- **Accessibility:** Tone must not be carried by color alone; Direct-mode
-  palette must still meet contrast standards; screen-reader users receive
-  tone via copy, which works naturally.
+- **Accessibility:** Tone must not be carried by color alone; the
+  challenging voice's palette must still meet contrast standards;
+  screen-reader users receive tone via copy, which works naturally.
 - **Ethics:** Highest ethical surface of the MVP set; see dedicated doc.
-  Mitigations: mode preview before choice, one-tap switch at any time
+  Mitigations: voice preview before choice, one-tap switch at any time
   (never buried), possible soft check-in if signals suggest distress.
-- **Battery/Privacy impact:** None / none (tone preference stored locally).
-- **Priority: MVP**, conditional on the reframe. If the product owner insists
-  on literal brutality, our recommendation is to ship Gentle-only first —
-  the evidence risk is that serious.
+- **Battery/Privacy impact:** None / none (voice preference stored locally).
+- **Priority: MVP**, with the reframe approved in the Phase 0 review
+  (approved with revisions): the behavioral contract is binding; final
+  voice names to be ratified with Phase 1.
 
 ---
 
@@ -104,8 +109,9 @@ delivery of "time is moving." No notification fatigue, no permission needed.
 4. **Minimal "now" clock with progress ring** — a hybrid; the ring gives
    feeling, the clock gives coordinates.
 5. **Framing variants:** depletion ("gone") vs. opportunity ("still left").
-   Framing research suggests testing both against mode (Direct/Gentle may
-   want different defaults). Anxiety risk of pure-depletion framing is real.
+   Framing research suggests testing both against voice (the challenging
+   and nurturing voices may want different defaults). Anxiety risk of
+   pure-depletion framing is real.
 
 ### Hard platform constraints (must shape design, discovered now, detailed in Phase 3)
 
@@ -217,22 +223,23 @@ opportunity.
 
 ---
 
-## 4. Quote Engine
+## 4. Quote Engine → Content Engine
 
 ### Behavioral analysis
 
-As specified (motivational quotes in Brutal/Gentle variants, shown in
-widgets/home/notifications), this is the weakest idea of the six: generic
-motivational quotes have near-zero durable behavioral effect, habituate in
-days, and position us in the quote-app junk drawer
+As originally specified (motivational quotes in Brutal/Gentle variants,
+shown in widgets/home/notifications), this is the weakest idea of the six:
+generic motivational quotes have near-zero durable behavioral effect,
+habituate in days, and position us in the quote-app junk drawer
 (`WhyProductivityAppsFail.md` F7; `CompetitiveLandscape.md` §E).
 
-### The reframe we recommend
+### The reframe (approved in Phase 0 review)
 
-**Demote from "feature" to "content system."** There is no Quote Engine
-surface of its own; there is a **tone-aware content library** that supplies
+**The Quote Engine becomes the Content Engine.** There is no quote surface
+of its own; there is a **voice-aware content system** that supplies
 *functional* lines to the surfaces we already have (widget footer,
-notifications, Start Now screen, lapse-recovery moments). Content types, in
+notifications, Start Now screen, lapse-recovery moments). Quotes are one
+content type among several — and the least prioritized. Content types, in
 priority order:
 
 1. **Reframes** (CBT-derived, one sentence): "You don't need to feel ready.
@@ -243,26 +250,31 @@ priority order:
    open the file. That's the whole job."
 4. **Starting permissions** (self-compassion-derived): "A bad first minute
    still counts."
-5. Sparse classical quotes (Seneca on time, etc.) as seasoning — capped at a
-   small share of rotation to avoid the quotes-app smell.
+5. **Quotes** (Seneca on time, etc.) as seasoning — one content type among
+   five, capped at a small share of rotation to avoid the quotes-app smell.
 
-Every line is authored twice (Direct/Gentle), tagged by *context slot*
-(morning, pre-start, post-lapse, evening) — content architecture to be
-specified in Phase 2 (`Microcopy.md`) and Phase 3 (content data model).
+Every line is authored per voice, tagged by *context slot* (morning,
+pre-start, post-lapse, evening, fresh-start landmark — see
+`MicrocopyStrategy.md` §3.4) — content architecture to be specified in
+Phase 2 (`Microcopy.md`) and Phase 3 (content data model). The Content
+Engine is also the delivery mechanism for future voice expansions such as
+the optional philosophy pack (§6).
 
 ### Assessment grid
 
 - **Strengths (post-reframe):** Feeds every surface from one authored,
-  reviewable, testable catalog; makes tone-mode real; cheap; fully offline.
-- **Weaknesses:** Authoring quality bar is high (bad Direct copy = brand
-  damage); localization multiplies cost (tones × languages); needs editorial
-  review process with ethical guidelines.
+  reviewable, testable catalog; makes the voice system real; cheap; fully
+  offline.
+- **Weaknesses:** Authoring quality bar is high (bad challenging-voice copy
+  = brand damage); localization multiplies cost (voices × languages); needs
+  editorial review process with ethical guidelines.
 - **Complexity: Low** technically (local structured content + selection rules);
-  the cost is editorial.
+  the cost is editorial (est. 400–800 lines at launch,
+  `MicrocopyStrategy.md` §3.5).
 - **Accessibility:** Plain-language guidelines; screen-reader friendly by
   nature.
-- **Ethics:** Direct-mode content rules apply (see §1); review checklist in
-  `EthicalConsiderations.md` §5.
+- **Ethics:** Challenging-voice content rules apply (see §1); review
+  checklist in `EthicalConsiderations.md` §5.
 - **Battery/Privacy:** None / none (fully local).
 - **Priority: MVP as infrastructure**, not as a marketed feature.
 
@@ -331,13 +343,13 @@ validation status:
 
 ---
 
-## 6. Optional Future Ideas (research-only, per brief)
+## 6. Optional Future Ideas (triage; revised per Phase 0 review)
 
 Rapid triage so Phase 1 can formally park them:
 
 | Idea | Triage | Notes |
 |---|---|---|
-| Death Clock / Life Progress / Memento Mori | **Dangerous by default** | Terror-management backfire risk (`ProcrastinationScience.md` §3.3); life-expectancy math is pseudo-precision; real self-harm-adjacent risk for vulnerable users. If ever built: opt-in behind reflection-oriented framing (Stoic-style), never in Direct mode, never as default widget. Research-only stands. |
+| Death Clock / Life Progress / Memento Mori | **Optional philosophy pack — disabled by default** (per Phase 0 review decision) | Recast as **"The Stoic"**: an opt-in voice + optional life-scale widget faces, framed as reflective practice (Stoic tradition, WeCroak precedent), never as countdown pressure. Hard guardrails stand: disabled by default, explicit consent step, excluded from the challenging voice's register, never a default surface, no pseudo-precise life-expectancy math (user-set horizon or symbolic scale instead), dedicated ethics review before ship (`EthicalConsiderations.md` §4.2), reviewed against suicide-prevention content guidelines. Post-MVP. |
 | Live Wallpaper (time-aware) | Promising, Android-first | Natural extension of the widget identity; iOS can't do live wallpapers — parity issue. Post-MVP. |
 | Lock-screen widgets | **Promote to Phase 2/3 consideration** | Not really "future" — it is the same widget on a better surface; iOS lock widgets + Android AOD are high-value placements. |
 | Screen-time awareness | Decline | F6 territory, OS-owned surface, permission-heavy (usage-access), duplicates Opal/OS features. |
@@ -354,8 +366,8 @@ Rapid triage so Phase 1 can formally park them:
 
 The MVP that Phase 1 should formalize, per this assessment:
 
-> **Widget (feel time) → Start Now (act in 2 minutes) → tone-aware content
-> system (chosen voice, incl. lapse recovery) → Speak Time (where the
+> **Widget (feel time) → Start Now (act in 2 minutes) → Content Engine +
+> voice system (chosen voice, incl. lapse recovery) → Speak Time (where the
 > platform allows it) — and nothing else.**
 
 Four surfaces, one loop, every element traceable to the intervention stack in

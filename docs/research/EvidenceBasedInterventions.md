@@ -100,7 +100,7 @@ Evidence ratings used below:
   lab studies (Peters & Büchel, 2010, and a sizable literature since).
 - **App fit: Good but heavier.** Guided "vividly imagine tomorrow-you at
   9 a.m. with this done/not done" prompts are feasible; age-progressed
-  avatars etc. are out of MVP scope. Candidate for the Quote Engine's more
+  avatars etc. are out of MVP scope. Candidate for the Content Engine's more
   substantive content and for post-MVP features.
 
 ### 2.4 Externalized time for time-blind users (spoken time, ambient clocks)
@@ -133,8 +133,8 @@ Evidence ratings used below:
   interventions produced the largest reductions in procrastination.
 - **App fit: Partial.** Full CBT is a therapy product (and a regulatory
   posture we should avoid). But lightweight, single-thought reframes are
-  legitimate content: "You don't need to feel like it. You need 120 seconds."
-  The Quote Engine should be seeded with reframes, not just motivation.
+  legitimate content:   "You don't need to feel like it. You need 120 seconds."
+  The Content Engine should be seeded with reframes, not just motivation.
 
 ### 3.3 Values connection ("why this matters to you")
 
@@ -156,10 +156,12 @@ Evidence ratings used below:
 | Punishment/loss-based gamification | **Mixed** | Forest's dead-tree loss aversion works for focus sessions but transfers poorly to *starting*, and adds guilt |
 | Generic daily motivational quotes | **Folk, near-zero** | Inspiration without an action affordance decays within minutes; also positions us with low-credibility apps |
 
-The last row matters: the Quote Engine as currently conceived is the weakest
-of the six feature ideas *if* it ships generic motivation. It becomes
-defensible only as a delivery vehicle for reframes, implementation-intention
-prompts, and time-granularity framing. See `FeatureIdeaAssessment.md` §4.
+The last row matters: the Quote Engine as originally conceived is the
+weakest of the six feature ideas *if* it ships generic motivation. It is
+defensible only reframed as the **Content Engine** — a delivery vehicle for
+reframes, implementation-intention prompts, and time-granularity framing, in
+which quotes are one content type among several. See
+`FeatureIdeaAssessment.md` §4.
 
 ## 5. Synthesis: The Intervention Stack This Product Should Own
 
@@ -173,7 +175,7 @@ Ordered by evidence strength × fit with the product philosophy:
    evidence; we should instrument it and generate evidence.
 3. **Compassionate lapse recovery** — evidence-based, almost uncontested in
    the market, and the ethical backbone that makes the whole product safe.
-4. **Tone-adaptive reframing content** (the evolved Quote Engine) — support
+4. **Voice-adaptive reframing content** (the Content Engine) — support
    layer for 1–3, not a standalone feature.
 
 Everything in the MVP should be traceable to one of these four.

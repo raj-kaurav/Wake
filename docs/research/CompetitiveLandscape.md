@@ -168,8 +168,9 @@ Categories reviewed:
   Proves a memento-mori niche exists; its deliberate uselessness beyond the
   reminder also shows the ceiling of awareness-without-action (F6).
 - **Death Clock / life-expectancy apps:** mostly novelty; occasional viral
-  spikes, poor retention; reinforces treating mortality features as
-  research-only (Feature 6) with TMT backfire risks
+  spikes, poor retention; reinforces treating mortality features as an
+  opt-in, off-by-default philosophy pack with hard ethics guardrails
+  (`FeatureIdeaAssessment.md` §6) given TMT backfire risks
   (`ProcrastinationScience.md` §3.3).
 - **"One thing" single-task apps (various):** small products that show a
   "just one intention" scope is viable and loved by a minimalist audience,

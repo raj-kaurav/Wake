@@ -1,9 +1,10 @@
 # Wake
 
-An anti-procrastination mobile app built on behavioral psychology rather than
-task management.
+A **time awareness app**: it makes today feel finite and starting feel two
+minutes small. Built on behavioral psychology rather than task management —
+anti-procrastination is the outcome, not the category.
 
-> **Product philosophy:** Make time felt, not tracked.
+> **Product philosophy:** Make time felt. Make starting small.
 
 ## Status
 
@@ -12,6 +13,7 @@ design. The project follows a phase-gated lifecycle in which each
 documentation phase is reviewed and approved before the next begins — and
 implementation begins only after all documentation phases are approved.
 
-- **Current phase:** Phase 0 — Discovery & Research (complete, awaiting approval)
+- **Phase 0 — Discovery & Research:** ✅ approved with revisions (applied)
+- **Phase 1 — Product Documentation:** complete, awaiting approval
 - **Start here:** [`docs/README.md`](docs/README.md) — phase-gate tracker and reading order
-- **Key document:** [`docs/research/ProductOpportunityReport.md`](docs/research/ProductOpportunityReport.md) — the go/no-go recommendation
+- **Key documents:** [`docs/product/ProductPrinciples.md`](docs/product/ProductPrinciples.md) — the project constitution · [`docs/research/ProductOpportunityReport.md`](docs/research/ProductOpportunityReport.md) — the Phase 0 opportunity report

@@ -12,20 +12,30 @@ under what conditions? This is the document to read if you read only one.
 
 **Recommendation: GO — with three binding conditions.**
 
-The vision ("make time felt, not tracked") targets a real, evidence-backed
-mechanism gap that no mainstream product occupies. The core loop implied by
-the feature ideas — ambient time awareness feeding a friction-free start
-action, delivered in a user-chosen voice — sits in an empty quadrant of the
-market (emotionally designed, approach-side interventions; see
-`CompetitiveLandscape.md` positioning map) and rests on interventions with
-strong-to-moderate scientific support (`EvidenceBasedInterventions.md`).
+The vision targets a real, evidence-backed mechanism gap that no mainstream
+product occupies, resting on two pillars the research supports jointly:
+**make time felt** (attack delay discounting through ambient, perceptible
+time) **and make starting smaller** (attack mood-repair avoidance through
+sub-threshold first actions). The core loop implied by the feature ideas —
+ambient time awareness feeding a friction-free start action, delivered in a
+user-chosen voice — sits in an empty quadrant of the market (emotionally
+designed, approach-side interventions; see `CompetitiveLandscape.md`
+positioning map) and rests on interventions with strong-to-moderate
+scientific support (`EvidenceBasedInterventions.md`).
+
+Positioning follows from the pillars: this is a **time awareness product** —
+a new, ownable category — not another productivity tool. "Anti-
+procrastination" describes the outcome users get, not the category we
+occupy; the product speaks about time and starting, never about a disorder.
 
 The three conditions:
 
-1. **Reframe "Brutally Honest" as "Direct" with a binding content contract.**
-   Literal brutality contradicts the strongest finding in the field (shame
-   increases procrastination) and concentrates harm on the most vulnerable
-   users. Full analysis in `EthicalConsiderations.md` §3.
+1. **Reframe "Brutally Honest" as a challenging voice bound by a content
+   contract** (challenge the behavior and the moment, never the person or
+   the past). Literal brutality contradicts the strongest finding in the
+   field (shame increases procrastination) and concentrates harm on the most
+   vulnerable users. Full analysis in `EthicalConsiderations.md` §3; label
+   alternatives in `ToneNamingExploration.md`.
 2. **Enforce radical scope discipline: no lists, no ledger, no lecture.**
    The product stores at most one current intention, never displays failure
    history, and never becomes a content feed. Every failure mode documented
@@ -59,9 +69,10 @@ execution quality, not in feature count.
   well-executed v1, brand voice, and content quality are the defenses; we
   should expect fast followers if the concept demonstrates traction.
 - *Category ambiguity.* "What is it — a clock? a timer? a quotes app?" is a
-  real marketing problem. The store listing must sell the *moment* ("for
-  when you can't start"), not the mechanics. Naming/positioning work in
-  Phase 1 must treat this as a top-three problem.
+  real marketing problem. The answer, adopted in the Phase 0 review, is to
+  claim a category of our own — **Time Awareness** — and sell the *moment*
+  ("for when you can't start"), never the mechanics. Naming/positioning work
+  in Phase 1 must treat this as a top-three problem.
 - *Evidence gap on the identity feature.* The widget's mechanic is plausible
   but not directly validated (`EvidenceBasedInterventions.md` §2.2). We
   mitigate by instrumenting it and being ready to iterate the representation,
@@ -91,15 +102,18 @@ Handed to Phase 1 as a strong recommendation, not a fait accompli
 
 1. **Time Awareness Widget** — day-as-shape, granularity-framed; the identity.
 2. **Start Now** — the behavioral core; the button the whole product serves.
-3. **Tone system (Direct/Gentle)** — architecture from day one; content
-   system (evolved Quote Engine) as its delivery mechanism, including
-   designed lapse recovery.
+3. **Voice system** (challenging + nurturing voices; naming in
+   `ToneNamingExploration.md`) — architecture from day one; the **Content
+   Engine** (reframed Quote Engine, quotes as one content type) as its
+   delivery mechanism, including designed lapse recovery.
 4. **Speak Time** — Android-first full version; iOS notification-sound
    approximation; feasibility spike before final commitment.
 
 Explicitly out of MVP (park in Phase 1 `OutOfScope.md`): everything in
-Feature 6, calendar integration, any statistics surface, any social feature,
-any AI feature, task storage beyond one intention string.
+Feature 6 — including the optional philosophy pack ("The Stoic",
+off-by-default, post-MVP) — calendar integration, any statistics surface,
+any social feature, any AI feature, task storage beyond one intention
+string.
 
 ## 5. Principal Risks (register to be formalized in Phase 1 `Risks.md`)
 
@@ -108,7 +122,7 @@ any AI feature, task storage beyond one intention string.
 | R1 | Habituation: widget becomes wallpaper, spoken time becomes noise | High | Variation in rendering/content; instrument decay curves; treat as a core design research question, not polish |
 | R2 | Novelty churn: app is liked, praised, and abandoned in week 3 | High | The Start Now loop must produce felt wins in week 1; lapse-recovery design; low-motivation-state usability target |
 | R3 | Category confusion in marketing | Medium-High | Position around the moment of starting; never lead with "timer/quotes/clock" |
-| R4 | Direct mode executed badly → brand damage & user harm | Medium-High | Content contract + review checklist (`EthicalConsiderations.md` §3, §5); small reviewed corpus at launch |
+| R4 | Challenging voice executed badly → brand damage & user harm | Medium-High | Content contract + review checklist (`EthicalConsiderations.md` §3, §5); small reviewed corpus at launch |
 | R5 | iOS platform ceiling degrades Speak Time & widget fidelity | Medium | Tiered design accepted upfront; feasibility spikes in Phase 3; honest cross-platform messaging |
 | R6 | Fast followers | Medium | Speed, voice, execution quality; accept low technical moat consciously |
 | R7 | Mechanism risk: felt time doesn't move behavior for enough users | Medium | The bet is explicit; instrument widget→start conversion; Start Now works even if the widget only decorates |
@@ -122,14 +136,19 @@ any AI feature, task storage beyond one intention string.
   Start-Now-first identity).
 - Discovery of a well-executed incumbent in the same quadrant (none found as
   of this review).
-- A product-owner decision to keep literal "Brutal" mode — this would flip
-  the ethics assessment and our recommendation to Gentle-only at launch.
+- A product-owner decision to revert to a literal "Brutal" mode — this
+  would flip the ethics assessment and our recommendation to a
+  nurturing-voice-only launch. (The Phase 0 review instead ratified the
+  behavioral contract and asked for label alternatives, resolved in
+  `ToneNamingExploration.md`.)
 
-## 7. Immediate Next Steps (upon Phase 0 approval)
+## 7. Immediate Next Steps (Phase 0 approved with revisions; revisions applied)
 
-1. Phase 1 kickoff: draft `docs/product/` per the brief's list, importing
-   this report's MVP recommendation, risk register seed, and the standing
-   ethical commitments (`EthicalConsiderations.md` §6) for ratification.
+1. Phase 1 kickoff: draft `docs/product/` per the brief's list — including
+   the permanent `ProductPrinciples.md` constitution added by the review —
+   importing this report's MVP recommendation, risk register seed, and the
+   standing ethical commitments (`EthicalConsiderations.md` §6) for
+   ratification.
 2. Carry `OpenQuestions.md` hypotheses into Phase 1
    `UserResearchHypothesis.md` with a validation plan.
 3. Schedule the two Phase 3 feasibility spikes now flagged (iOS widget

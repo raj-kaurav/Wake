@@ -78,13 +78,15 @@ must be locked into Phase 1's `SuccessMetrics.md` and Phase 3's
 4. **Brand/latent liability:** screenshots of the app calling a user a loser
    will circulate stripped of the "they opted in" context.
 
-### The resolution: Direct, not Brutal
+### The resolution: a challenging voice, not a brutal one
 
 Keep the two-register architecture (it is genuinely valuable); redefine the
-edgy pole as **Direct** — the voice of a good coach or a straight-talking
-friend, not a bully:
+edgy pole as a **challenging voice** — a good coach or a straight-talking
+friend, not a bully. (Label alternatives with UX rationale are explored in
+`ToneNamingExploration.md`; provisional recommendation: "The Coach." The
+behavioral contract below is binding regardless of the label.)
 
-| Dimension | Direct mode does | Direct mode never does |
+| Dimension | The challenging voice does | The challenging voice never does |
 |---|---|---|
 | Target | The behavior, the moment, the next action | The person, their character, their worth |
 | Time reference | Present and immediate future ("It's 14:00. Start.") | Accumulated past failures ("Another wasted week") |
@@ -94,12 +96,12 @@ friend, not a bully:
 
 **Enforcement mechanisms to carry into later phases:**
 
-- A written **content style contract** per mode (Phase 2 `Microcopy.md`) with
-  the never-list above as hard rules.
+- A written **content style contract** per voice (Phase 2 `Microcopy.md`)
+  with the never-list above as hard rules.
 - **Editorial review checklist** (see §5) applied to every line in the
-  content system — no generative/unreviewed content in v1.
-- **Mode preview** during onboarding (hear/see samples before choosing);
-  **one-tap mode switch** permanently available, never buried.
+  Content Engine — no generative/unreviewed content in v1.
+- **Voice preview** during onboarding (hear/see samples before choosing);
+  **one-tap voice switch** permanently available, never buried.
 - Onboarding choice screen itself stays tone-neutral (no self-labeling like
   "I deserve tough love").
 
@@ -114,13 +116,19 @@ surface individually disableable; instrument for signs of aversive use
 (e.g., rapid widget removal, speak-time disabled within a day) as research
 input, not as re-engagement triggers.
 
-### 4.2 Mortality content (future ideas)
+### 4.2 Mortality content (the optional philosophy pack)
 
-Death Clock/Memento Mori concepts remain research-only. If ever pursued:
-reflective Stoic framing, strictly opt-in behind an explicit consent step,
-excluded from Direct mode's sharper register, never a default surface, and
-reviewed against suicide-prevention content guidelines. "Regret simulation"
-already failed concept review (`FeatureIdeaAssessment.md` §6).
+Per the Phase 0 review decision, Death Clock/Memento Mori concepts are
+recast as an **optional philosophy pack ("The Stoic") — disabled by
+default**, rather than rejected outright. The ethics conditions are
+non-negotiable and travel with the feature: strictly opt-in behind an
+explicit consent step; reflective Stoic framing (practice, not countdown
+pressure); no pseudo-precise life-expectancy math; excluded from the
+challenging voice's sharper register; never a default surface or default
+widget face; a dedicated ethics review before ship; and review against
+suicide-prevention content guidelines. "Regret simulation" remains rejected —
+it failed concept review (`FeatureIdeaAssessment.md` §6) and is not part of
+the pack.
 
 ### 4.3 Not-a-therapist boundary
 
@@ -142,7 +150,7 @@ posture. Any future cloud feature must re-clear this bar explicitly.
 ### 4.5 Monetization ethics (flag for later)
 
 Whatever the model (Phase 1+ decision), prohibited at concept stage:
-paywalling safety features (mode switching, quiet hours, disabling
+paywalling safety features (voice switching, quiet hours, disabling
 awareness), guilt-based upsells, and fake-urgency sales tactics inside an
 app about urgency. The irony would be fatal.
 
@@ -164,8 +172,8 @@ Every line shipped in the content system must pass:
 4. Is it honest? (No fake stakes, no inflated claims, no pseudo-facts.)
 5. Would it be safe read at 2 a.m. by a distressed user?
 6. Would the user endorse it knowing why we wrote it? (§2 test)
-7. Direct-mode extra: is it a coach line, not a bully line?
-8. Gentle-mode extra: is it permission-giving without excusing inaction
+7. Challenging-voice extra: is it a coach line, not a bully line?
+8. Nurturing-voice extra: is it permission-giving without excusing inaction
    forever? (Gentle ≠ "never start.")
 
 ## 6. Standing Ethical Commitments (proposed for ratification in Phase 1)
@@ -173,7 +181,7 @@ Every line shipped in the content system must pass:
 1. The success metric is user action in real life, never time-in-app.
 2. No visible debt: the app never accumulates or displays failure history.
 3. No dark patterns: the prohibited list in §2 is binding.
-4. Direct ≠ brutal: the §3 style contract is binding.
+4. Challenging ≠ brutal: the §3 style contract is binding.
 5. Local-first, minimal data, no sale/sharing of behavioral data.
 6. Every awareness feature is opt-in-or-obvious and individually
    disableable.
