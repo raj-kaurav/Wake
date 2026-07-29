@@ -68,7 +68,8 @@ also governs *interface* copy (buttons, settings, errors).
 
 | Concept | Term | Banned alternatives |
 |---|---|---|
-| The 2-minute act | **start** | session, sprint, focus block, pomodoro |
+| The 2-minute act (user-facing) | **start** | session, sprint, focus block, pomodoro |
+| The 2-minute mechanic (internal docs) | **MicroStart** | Start Now (legacy), session |
 | Scheduled awareness notification | **pulse** | reminder, alert, nudge (in UI copy) |
 | Spoken clock feature | **Speak Time** | voice assistant, announcements |
 | The one stored string | **intention** | task, todo, goal |

@@ -15,6 +15,7 @@ implementation begins only after all documentation phases are approved.
 
 - **Phase 0 — Discovery & Research:** ✅ approved with revisions (applied)
 - **Phase 1 — Product Documentation:** ✅ approved
-- **Phase 2 — UX Documentation:** complete, awaiting approval
+- **Phase 2 — UX Documentation:** revised per review, awaiting re-approval
+- **Phase 3:** not started (BehaviorArchitecture bridge drafted only)
 - **Start here:** [`docs/README.md`](docs/README.md) — phase-gate tracker and reading order
 - **Key documents:** [`docs/product/ProductPrinciples.md`](docs/product/ProductPrinciples.md) — the project constitution · [`docs/research/ProductOpportunityReport.md`](docs/research/ProductOpportunityReport.md) — the Phase 0 opportunity report

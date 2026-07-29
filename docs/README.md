@@ -17,8 +17,8 @@ documentation has been reviewed and approved by the product owner.**
 |-------|-------|-----------|--------|
 | **Phase 0** | Discovery & Research | `docs/research/` | ✅ Approved with revisions (revisions applied) |
 | **Phase 1** | Product Documentation | `docs/product/` | ✅ Approved |
-| **Phase 2** | UX Documentation | `docs/ux/` | ✅ Complete — **awaiting approval** |
-| Phase 3 | Technical Planning | `docs/architecture/` | ⛔ Blocked on Phase 2 approval |
+| **Phase 2** | UX Documentation | `docs/ux/` | ✅ Revised per review — **awaiting re-approval** |
+| Phase 3 | Technical Planning | `docs/architecture/` | ⛔ Blocked on Phase 2 approval *(BehaviorArchitecture.md bridge already drafted)* |
 | Phase 4 | Engineering Standards | `docs/engineering/` | ⛔ Blocked |
 | Phase 5 | Design System | `docs/design-system/` | ⛔ Blocked |
 | Phase 6 | Development Rules | `.cursor/` | ⛔ Blocked |
@@ -47,23 +47,27 @@ Foundations first, then surfaces, then the lifetime view:
 4. [`ux/Navigation.md`](ux/Navigation.md) — the deliberately trivial navigation model
 5. [`ux/UserFlows.md`](ux/UserFlows.md) — ten canonical flows with budgets and edge cases
 6. [`ux/Onboarding.md`](ux/Onboarding.md) — five decisions, sixty seconds, zero permissions
-7. [`ux/Widgets.md`](ux/Widgets.md) — concept exploration; **"Day Dots" recommended** (decision requested)
+7. [`ux/Widgets.md`](ux/Widgets.md) — **Day Dots = Default V1** (not long-term-final); long-term concepts for beta
 8. [`ux/NotificationStrategy.md`](ux/NotificationStrategy.md) — the exhaustive notification inventory + respectful-silence spec
-9. [`ux/ContentSystem.md`](ux/ContentSystem.md) — **the structured behavioral content system** (expanded per review)
+9. [`ux/ContentSystem.md`](ux/ContentSystem.md) — Content Engine + **Emotional Temperature** metadata
 10. [`ux/Microcopy.md`](ux/Microcopy.md) — voice contracts, terminology law, edge-state copy
-11. [`ux/Accessibility.md`](ux/Accessibility.md) — the multi-sensory time contract; launch requirements
+11. [`ux/Accessibility.md`](ux/Accessibility.md) — multi-sensory + **cognitive accessibility**
 12. [`ux/EmotionalDesign.md`](ux/EmotionalDesign.md) — per-moment emotional specification
 13. [`ux/BehavioralDesign.md`](ux/BehavioralDesign.md) — friction budgets, defaults, anti-habituation, graduation design
-14. [`ux/EmotionalJourney.md`](ux/EmotionalJourney.md) — install → autonomy progression *(added per review)*
-15. [`ux/UserSuccessDefinition.md`](ux/UserSuccessDefinition.md) — success from the user's side *(added per review)*
-16. [`ux/AntiGoals.md`](ux/AntiGoals.md) — eight outcomes we must not cause *(added per review)*
-17. [`ux/WireframeDescriptions.md`](ux/WireframeDescriptions.md) — textual wireframes for every screen and surface
-18. [`ux/FutureUXIdeas.md`](ux/FutureUXIdeas.md) — the parking lot
+14. [`ux/EmotionalJourney.md`](ux/EmotionalJourney.md) — canonical arc; **Relief before Confidence**
+15. [`ux/UserSuccessDefinition.md`](ux/UserSuccessDefinition.md) — success from the user's side
+16. [`ux/AntiGoals.md`](ux/AntiGoals.md) — anti-goals + **mandatory procrastination-misuse review**
+17. [`ux/EmptyStates.md`](ux/EmptyStates.md) — empty/return/denied states *(review addition)*
+18. [`ux/Rituals.md`](ux/Rituals.md) — behavioral ritual framework *(review addition)*
+19. [`ux/Terminology.md`](ux/Terminology.md) — **MicroStart** internal canonical term *(review addition)*
+20. [`ux/WireframeDescriptions.md`](ux/WireframeDescriptions.md) — textual wireframes
+21. [`ux/FutureUXIdeas.md`](ux/FutureUXIdeas.md) — parking lot
+22. [`architecture/BehaviorArchitecture.md`](architecture/BehaviorArchitecture.md) — UX↔engineering bridge matrix *(review addition)*
 
-Voice naming continues in parallel (round 2:
-[`research/ToneNamingExploration.md`](research/ToneNamingExploration.md) §5)
-without blocking UX work; final label ratification deadline is end of
-Phase 5.
+Voice naming continues in parallel (round 3:
+[`research/ToneNamingExploration.md`](research/ToneNamingExploration.md) §6)
+without renaming the repository; Coach/Friend remain temporary display
+labels. Final ratification deadline: end of Phase 5.
 
 ## Phase 1 (approved)
 

@@ -17,16 +17,21 @@ second, emotionally calm, and always carrying one Start affordance (P2,
 D2, D3). It must communicate *without being read*: shape first, digits as
 caption (D4).
 
-## 2. Concept Exploration (three candidates carried into Phase 2 testing)
+## 2. Widget Concept Space — Default V1 vs Long-Term Direction
 
-### W-A "Day Dots" — recommended primary
+**Status of decision:** Day Dots is the **Default V1 widget** for launch /
+early beta — **not a finalized long-term visual identity.** Additional
+concepts below are retained for beta exploration; adoption of any
+alternative requires Wave 4 / post-launch A/B evidence, not Phase 2 taste.
+
+### 2.1 Default V1 — W-A "Day Dots"
 
 A grid of dots representing the wake window (one dot = 15 min; a 16-hour
 window = 64 dots). Passed dots fade/fill; the current dot breathes gently
 (reduced-motion-safe alternative: higher contrast, no animation); future
 dots remain open.
 
-- **Why recommended:** (1) *Natively coarse* — a 15-min step matches iOS
+- **Why Default V1:** (1) *Natively coarse* — a 15-min step matches iOS
   refresh budgets by design, so both platforms show the same honest
   granularity (R5 solved by design rather than fought); (2) discrete dots
   read as "moments available" (opportunity framing structurally built in —
@@ -38,26 +43,119 @@ dots remain open.
   (visual design must avoid calendar-like row labeling — dots are *today
   only*, never a history grid, D6).
 
-### W-B "Day Arc" — secondary candidate
+### 2.2 Long-term candidates (beta exploration — do not ship as V1 default)
+
+### W-B "Day Arc"
 
 A single arc/ring that depletes (or fills) across the wake window.
 Beautiful and instantly legible; but continuous geometry *implies*
 continuous motion, which iOS refresh budgets can't honor (a visibly
 stepping arc reads as broken — R5), and ring-shaped progress is the most
-copied visual in wellness apps (category-confusion risk R3). Kept for
-lock-screen/watch surfaces (Horizon 2) where rings are native grammar.
+copied visual in wellness apps (category-confusion risk R3). **Best home:
+lock-screen / watch surfaces (Horizon 2)** where rings are native grammar.
 
-### W-C "Remaining field" — minimal text-forward variant
+### W-C "Remaining field"
 
 Large granular text ("6h 40m left of today") over a subtle shrinking
 field. Strong for accessibility and for users who prefer words; weak on
-feel-without-reading (D4). Ships as an alternate widget style if Phase 5
-budget allows; otherwise its text is already the primary widget's caption.
+feel-without-reading (D4). Candidate as an **accessibility / alternate
+style**, not a replacement identity.
 
-**Decision requested with this phase:** W-A primary, W-B deferred to
-lock/watch surfaces, W-C as stretch alternate.
+### W-D "Opportunity Tiles"
 
-## 3. Anatomy (W-A, medium size — reference layout)
+A small set of large tiles representing remaining day-blocks (e.g., four
+tiles for morning / midday / afternoon / evening). Empty tiles = still
+available; filled = passed. High emotional "opportunity" read; fewer
+elements than dots.
+
+- Emotional impact: strong opportunity framing; can feel chunky/coarse.
+- Glanceability: excellent at medium/large; weak at small.
+- Android / iOS: coarse steps friendly to both; tile count must stay
+  stable across wake-window lengths (variable wake windows complicate
+  layout).
+- Accessibility: tiles need clear labels; color-alone banned.
+- Battery: low (few updates).
+- Platform consistency: high if tile count is fixed (e.g., always 4).
+
+### W-E "Timeline Blocks"
+
+Horizontal blocks along a day timeline (Structured-adjacent geometry,
+planless). Current position marked; past muted; future open. Risk: visual
+kinship with planners (R3 / P7 gravity).
+
+- Emotional impact: orientation-strong; can imply a *schedule* even with
+  no events (anti-pattern watch).
+- Glanceability: good on wide/medium widgets; poor on small.
+- Android / iOS: 15–30 min steps OK; continuous scrubbing not feasible.
+- Accessibility: needs text equivalent of position + remaining.
+- Battery: low–medium.
+- Platform consistency: medium (aspect-ratio sensitive).
+
+### W-F "Living Horizon"
+
+A soft landscape / horizon line that shifts light/position across the
+wake window (dawn → noon → dusk metaphor). High brand beauty; high
+abstraction.
+
+- Emotional impact: calm, atmospheric; risk of decoration-without-meaning
+  (D2).
+- Glanceability: mood yes, precise remaining-time no — caption must carry
+  digits.
+- Android / iOS: must be stepped (keyframe faces), not animated live;
+  iOS especially limited.
+- Accessibility: cannot be the sole carrier of meaning; text mandatory.
+- Battery: medium if illustrated assets are heavy.
+- Platform consistency: hard (asset density / wallpaper bleed).
+
+### W-G "Remaining Day Ribbon"
+
+A single horizontal ribbon that shortens (or empties) as the day passes —
+Time Timer heritage in linear form.
+
+- Emotional impact: depletion-forward by default (H2 risk); opportunity
+  variant = ribbon of *remaining* growing emphasis on the open portion.
+- Glanceability: excellent.
+- Android / iOS: coarse steps look intentional on a ribbon; continuous
+  motion not required.
+- Accessibility: strong with labeled percentage/remaining text.
+- Battery: low.
+- Platform consistency: high.
+- Risk: progress-bar cliché; must not read as task progress (R3).
+
+### W-H "Segmented Day"
+
+Wake window divided into equal segments (e.g., 8 segments of ~2h).
+Current segment highlighted; past complete; future open. Between dots
+(fine) and tiles (coarse).
+
+- Emotional impact: structured calm; segments can feel like "blocks to
+  fill" (A5 watch — copy must not imply productivity quotas).
+- Glanceability: good.
+- Android / iOS: very budget-friendly.
+- Accessibility: segment labels + remaining summary.
+- Battery: low.
+- Platform consistency: high.
+
+### 2.3 Comparison matrix (summary)
+
+| Concept | Emotion | Glance | Android | iOS | A11y | Battery | Consistency | V1 posture |
+|---|---|---|---|---|---|---|---|---|
+| Day Dots (W-A) | Calm opportunity | High | High | High (coarse-native) | High (fill≠hue) | Low | High | **Default V1** |
+| Day Arc (W-B) | Elegant; urgency risk | High | High | Medium (stepping) | Medium | Low | Medium | Horizon 2 lock/watch |
+| Remaining field (W-C) | Clear, less "felt" | Medium | High | High | Highest | Low | High | Alt / a11y style |
+| Opportunity Tiles (W-D) | Strong opportunity | High (med+) | High | High | Medium | Low | Medium | Beta explore |
+| Timeline Blocks (W-E) | Orientation; planner risk | Medium | High | Medium | Medium | Low–Med | Medium | Beta explore |
+| Living Horizon (W-F) | Atmospheric | Low precision | Medium | Medium | Low alone | Medium | Low | Research only |
+| Remaining Ribbon (W-G) | Depletion/opportunity | High | High | High | High | Low | High | Beta explore |
+| Segmented Day (W-H) | Structured calm | High | High | High | High | Low | High | Beta explore |
+
+**Recommendation:** ship **Day Dots as Default V1**; run beta concept
+tests (static mocks + short diary) on W-D, W-G, and W-H before any
+long-term identity lock. Do not adopt a long-term direction in Phase 2.
+
+---
+
+## 3. Anatomy (W-A Default V1, medium size — reference layout)
 
 1. **Dot field** — the day, at-a-glance (majority of area).
 2. **Caption** — granular time text, framing per config ("6h 40m of today

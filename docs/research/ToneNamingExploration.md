@@ -154,3 +154,63 @@ choice persist; only the display string changes).
   frozen. Labels are display strings until then by architecture
   (`../ux/ContentSystem.md` voice dimension uses stable ids `coach` /
   `friend` regardless of display name).
+
+---
+
+## 6. Round 3 — Continued Exploration (Phase 2 review resolution)
+
+**Constraint (binding):** Do **not** rename anything across the repository.
+Coach / Friend remain temporary display labels. Stable internal ids remain
+`coach` / `friend`. This section evaluates alternatives only.
+
+### 6.1 Candidates under evaluation
+
+| Pair | Family |
+|---|---|
+| Coach / Friend *(current provisional)* | Personality |
+| Coach / Guide | Personality |
+| Coach / Companion | Personality |
+| Challenger / Supporter | Energy-of-role |
+| Mentor / Ally | Personality |
+| Spark / Steady | Energy |
+
+### 6.2 Evaluation grid
+
+Scores: ● strong · ◐ mixed · ○ weak
+
+| Pair | Emotional clarity | Localization | Onboarding comprehension | Extensibility | Inclusiveness | Marketability |
+|---|---|---|---|---|---|---|
+| Coach / Friend | ● / ● | ● | ● | ● (Stoic slots in) | ● | ● |
+| Coach / Guide | ● / ◐ | ● | ◐ (Guide vague) | ● | ● | ◐ |
+| Coach / Companion | ● / ● | ● | ● | ● | ◐ (wellness/Finch scent) | ◐ |
+| Challenger / Supporter | ● / ● | ◐ | ● | ◐ | ◐ (Challenger can read combative) | ◐ |
+| Mentor / Ally | ◐ / ● | ◐ | ◐ | ◐ | ● | ◐ |
+| Spark / Steady | ● / ● | ● | ◐ (needs samples) | ● | ● | ● |
+
+### 6.3 Personality names vs energy names
+
+- **Personality names** (Coach, Friend, Mentor, Ally, Companion, Guide)
+  borrow cultural priors for *how someone talks* — strong for onboarding
+  comprehension when samples are short; risk: implying a character/chatbot
+  (banned by no-ego rule) or importing baggage (gym Coach, wellness
+  Companion).
+- **Energy names** (Spark / Steady, Challenger / Supporter) describe
+  *how the moment feels*, aligning cleanly with Emotional Temperature
+  (`ContentSystem.md` §1.4) and avoiding character implication. Risk:
+  lower unaided comprehension — sample-lines-first presentation (§5.3)
+  becomes mandatory, not optional.
+
+**Recommendation (direction, not a rename):** Prefer **energy-describing
+names** for long-term brand (Spark / Steady currently leads that family),
+*or* keep one personality pair if Wave 1/2 shows Spark/Steady needs too
+much explanation. Do not decide until research; do not propagate any
+rename before Phase 5.
+
+### 6.4 Standing rules while exploration continues
+
+1. User-facing copy may say "voice" without naming until choice screen.
+2. Docs and code keep ids `coach` / `friend`.
+3. Display strings are a single localization key each — swap cost is one
+   string change, not a refactor.
+4. Future pack voices (Stoic) are energy-or-tradition names, never
+   invented human names.

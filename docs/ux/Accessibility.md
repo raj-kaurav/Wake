@@ -120,13 +120,91 @@ product's design is informed by executive-function and accessibility
 research — without clinical claims
 (`../research/ExecutiveFunctionADHD.md` §4).
 
-## 9. Testing Protocol
+## 9. Cognitive Accessibility
+
+Wake's audience disproportionately includes people navigating ADHD,
+executive dysfunction, anxiety, perfectionism, burnout, overwhelm, and
+decision fatigue (`../research/ExecutiveFunctionADHD.md`;
+`../product/Personas.md`). Cognitive accessibility is therefore a primary
+design surface — not an add-on. The curb-cut rule applies: reducing
+cognitive load helps everyone.
+
+### 9.1 Populations & failure modes we design against
+
+| Condition / state | Typical failure mode with tools | Wake response |
+|---|---|---|
+| ADHD / time blindness | Time vanishes; intentions evaporate | Externalized time (widget, Speak Time); one visible intention |
+| Executive dysfunction | Cannot initiate despite knowing | MicroStart: ask < resistance; zero decisions on the path |
+| Perfectionism | Start blocked by imagined quality bar | "Starting badly is allowed" (T4); 120 s is complete success |
+| Anxiety | Awareness → dread | Opportunity framing default; Recovering temperature; easy exits |
+| Burnout / overwhelm | Any ask feels like one more demand | Calm defaults; rest permission; pulses off until invited |
+| Decision fatigue | Every choice depletes | ≤5 onboarding decisions; ≤12 settings; one Start affordance |
+
+### 9.2 Interaction principles (cognitive)
+
+- **One act, one meaning** (D2/D3): never stack decisions onto a MicroStart.
+- **Recognition over recall:** intention prefilled; voice remembered; no
+  re-entry of setup.
+- **Forgiving paths:** stop needs no confirmation; wrong voice is 2 taps
+  to fix; absence leaves no debt (P3).
+- **No time pressure in the UI:** the two minutes are work time, not a
+  race against a dialog.
+- **Predictable structure:** same Now layout every open (D6) — cognitive
+  energy is not spent re-learning the screen after a lapse.
+
+### 9.3 Navigation principles (cognitive)
+
+- Depth ≤ 2; six screens total; no hidden gestures required
+  (`Navigation.md`).
+- Timer and Completion are modal moments — no way to wander mid-start.
+- Settings are flat and state-first (D10); no nested option trees.
+
+### 9.4 Notification principles (cognitive)
+
+- User-scheduled only; zero unsolicited (P5) — unexpected interrupts are
+  cognitive tax.
+- One idea per pulse; one primary action (Start); quiet-today always
+  present.
+- Respectful-silence reduces volume when ignored — noise is load.
+- Pulses suppressed during a running MicroStart (D5) — do not interrupt
+  the hard-won initiation.
+
+### 9.5 Copy principles (cognitive)
+
+- Grade ≤ 6; one idea per line; concrete verbs (`Microcopy.md`).
+- No controlling language; no identity labels ("procrastinator").
+- Edge copy: next-step-first, no blame (S8).
+- Emotional Temperature Recovering on return — cognitive safety after
+  lapse (`EmotionalJourney.md`).
+
+### 9.6 Visual principles (cognitive)
+
+- Shape over dense numerals (D4); caption is secondary.
+- Calm baseline; no alarm geometry; no badge counts (badges = open loops
+  in working memory).
+- Reduced motion honored; one breathing element max.
+- Rest face endorses stopping — visual permission to not produce (A5/A6).
+
+### 9.7 How Wake minimizes cognitive load (summary)
+
+Externalize time · shrink the ask · delete decisions on the critical path ·
+delete history that would demand processing · delete engagement that would
+compete with the task · speak in one idea · let intensity be invited ·
+treat return as a clean page. Every principle above is already a
+constitutional or UX rule; this section names them as cognitive-
+accessibility requirements so they remain release-blocking under P10.
+
+## 10. Testing Protocol
 
 - Per release: screen-reader pass on all six screens + widget + all
   notification types, both platforms; contrast audit on both palettes ×
   both modes; font-scale max audit; reduced-motion audit; switch-access
   core-loop run.
-- Beta cohort explicitly recruits assistive-technology users (S3 overlap;
+- Cognitive pass: decision-count audit on onboarding/settings; empty-state
+  review against `EmptyStates.md`; return-from-gap walkthrough (Relief
+  test).
+- Beta cohort explicitly recruits assistive-technology users and
+  ADHD-adjacent testers (S3 overlap;
   `../product/UserResearchHypothesis.md` Wave 4).
 - Accessibility defects are release-blocking at the same severity as data
   loss (constitutional standing, P10).

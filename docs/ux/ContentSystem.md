@@ -54,10 +54,59 @@ types keeps the schema uniform.)
 - **intensity:** 1-calm | 2-standard | 3-kinetic — selection respects the
   user's context (S6 post-lapse never serves intensity 3; late-night
   serving caps at 1 — the "Maya at 23:00" rule, D12).
+- **emotional_temperature:** see §1.4 — the felt register of the line,
+  orthogonal to voice/type/slot.
 - **landmark-eligible:** bool (fits fresh-start framing).
 - **locale:** BCP-47; launch = en only, schema ready for more.
 - **a11y note:** pronunciation/screen-reader hints where phrasing is
   ambiguous aloud.
+
+### 1.4 Emotional Temperature (new dimension)
+
+**Emotional Temperature** is the felt register of a line — how the moment
+should *land* emotionally — independent of who is speaking (voice), what
+job the line does (type), or when it is delivered (slot/context).
+
+| Value | Felt as | Typical homes |
+|---|---|---|
+| **Calm** | Unhurried orientation | S1 mornings; widget default |
+| **Focused** | Clear, kinetic-but-kind forward lean | S4 pre-start; T3 prompts |
+| **Grounded** | Steady, non-dramatic presence | Midday; Speak Time adjacent copy |
+| **Reflective** | Quiet looking-back-without-ledger | S3 evenings; landmark soft |
+| **Urgent** | Time-near without threat theater | Rare; Coach + depletion arm only; never S6/late-night |
+| **Recovering** | "I'm still welcome" | S6 post-lapse; first post-gap pulse (**required**) |
+| **Celebratory** | Proportionate warmth | S5 completion (T6) only; never inflated |
+
+**How it differs from adjacent dimensions:**
+
+| Dimension | Answers | Emotional Temperature does not |
+|---|---|---|
+| **Voice** | *Who* is speaking (Coach / Friend contract) | Change mid-voice; both voices own all temperatures |
+| **Content type** | *What job* the line does (reframe, prompt…) | Replace type — a T4 Permission can be Calm or Recovering |
+| **Context / slot** | *When / where* it is served | Equal slot — S2 can serve Focused or Grounded |
+| **Intensity** | *How much energy* (1–3) | Equal intensity — intensity-1 Calm ≠ intensity-1 Recovering |
+
+**Selection constraints (documentation; no implementation yet):**
+
+- S6 / gap-return / respectful-silence downgrade moments: **Recovering**
+  only (or Calm as fallback) — never Urgent, never Celebratory
+  (`EmotionalJourney.md` Relief-before-Confidence).
+- S5 completion: **Celebratory** or Calm; never Urgent.
+- Late-night / D12: Calm, Grounded, or Recovering; Urgent banned.
+- Urgent requires intensity ≤ 2 and Coach voice pending H2; Friend never
+  serves Urgent.
+
+**Future use cases (schema ready; not MVP behavior):**
+
+1. **Adaptive delivery** — after aversive-use signals or Coach→Friend
+   switches, prefer Recovering/Calm for a cooldown window.
+2. **Personalization** — user pacing preference ("softer mornings") maps
+   to temperature filters without inventing a third voice.
+3. **Pacing across the day** — Morning Calm → Midday Focused → Evening
+   Reflective as a default arc; landmarks may insert Reflective/Recovering.
+4. **Recovery after lapse** — temperature lock to Recovering until one
+   post-return MicroStart closes, then unlock (implements the emotional
+   arc in content selection).
 
 ## 2. Line Schema (canonical record)
 
@@ -68,6 +117,7 @@ voice: coach
 slots: [S2, S4]              # where it may serve
 framing: neutral
 intensity: 2
+emotional_temperature: focused  # §1.4
 landmark_eligible: false
 locale: en
 text: "You don't need ready. Ready comes after."
@@ -91,7 +141,8 @@ traces to a mechanism note.
 On each serving request `(surface, slot, voice, now, user-state)`:
 
 1. **Filter:** status=active ∧ voice ∧ slot ∧ locale ∧ intensity ≤ context
-   cap ∧ framing matches current config/experiment arm.
+   cap ∧ framing matches current config/experiment arm ∧
+   emotional_temperature ∈ allowed set for (slot, user-state).
 2. **Landmark override:** if today is a landmark (Monday, month-start,
    post-gap return) and slot ∈ {S1, S2}, re-filter to landmark_eligible/T7
    first; fall through if empty.

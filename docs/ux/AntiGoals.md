@@ -130,9 +130,45 @@ Frame: every anti-goal is a corruption of a Wake Loop transition
 
 ---
 
-## Standing Review Question
+## Standing Review Questions
 
-Every phase gate and every feature review asks: **"Which anti-goal does
-this change move us toward, even slightly — and is the guard already in
-place?"** An unanswered A-question blocks the change (same standing as the
-constitution's principle test, which these anti-goals extend to outcomes).
+Every phase gate and every feature review asks:
+
+1. **"Which anti-goal does this change move us toward, even slightly —
+   and is the guard already in place?"** An unanswered A-question blocks
+   the change (same standing as the constitution's principle test, which
+   these anti-goals extend to outcomes).
+
+2. **"Could this feature accidentally become another form of
+   procrastination?"** — **mandatory** for every future feature proposal.
+   Unanswered = blocked. Required answers (written into the proposal,
+   not oral):
+
+   | Required answer | What good looks like |
+   |---|---|
+   | **How could users misuse this?** | Name at least one plausible misuse path (configuration rabbit hole, browsing instead of starting, checking as avoidance, performing starts for scorekeeping…) |
+   | **Could users spend time inside Wake instead of starting?** | Yes/no with mechanism; if yes, state the time-sink surface |
+   | **How is that prevented?** | Point to a concrete guard: friction budget, missing surface, constitutional exclusion, respectful-silence, content-not-browsable, etc. "We'll be careful" is not an answer |
+
+### Review criteria (pass/fail)
+
+A proposal **fails** this review if any of the following hold:
+
+- It introduces a destination surface (feed, gallery, history, insights
+  dashboard) without a one-tap exit into a MicroStart and a session-length
+  guardrail (A1).
+- It creates a record the user can perform against (counts, bests,
+  comparisons) (A4).
+- It lengthens the path from Notice to MicroStart (A8 / D3).
+- Its "prevention" relies solely on user self-control rather than
+  structure (defaults, absence of the tempting surface, budgets).
+- It fights graduation by re-escalating prompts after organic quieting
+  (A3).
+
+A proposal **passes** when misuse paths are named, in-app time-sinks are
+structurally impossible or capped, and prevention maps to an existing
+guard in this document or the constitution — not to a future promise.
+
+Cross-check: every row in `../architecture/BehaviorArchitecture.md`
+already lists its Anti-Goal; new features must add a row that clears this
+review before entering the roadmap.
