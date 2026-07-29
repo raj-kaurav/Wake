@@ -16,9 +16,9 @@ documentation has been reviewed and approved by the product owner.**
 | Phase | Scope | Directory | Status |
 |-------|-------|-----------|--------|
 | **Phase 0** | Discovery & Research | `docs/research/` | ✅ Approved with revisions (revisions applied) |
-| **Phase 1** | Product Documentation | `docs/product/` | ✅ Complete — **awaiting approval** |
-| Phase 2 | UX Documentation | `docs/ux/` | ⛔ Blocked on Phase 1 approval |
-| Phase 3 | Technical Planning | `docs/architecture/` | ⛔ Blocked |
+| **Phase 1** | Product Documentation | `docs/product/` | ✅ Approved |
+| **Phase 2** | UX Documentation | `docs/ux/` | ✅ Complete — **awaiting approval** |
+| Phase 3 | Technical Planning | `docs/architecture/` | ⛔ Blocked on Phase 2 approval |
 | Phase 4 | Engineering Standards | `docs/engineering/` | ⛔ Blocked |
 | Phase 5 | Design System | `docs/design-system/` | ⛔ Blocked |
 | Phase 6 | Development Rules | `.cursor/` | ⛔ Blocked |
@@ -37,23 +37,39 @@ documentation has been reviewed and approved by the product owner.**
 4. `product/ProductPrinciples.md` is the project constitution: permanent,
    binding on every phase, amendable only by explicit product-owner decision.
 
-## Phase 1 Reading Order (current review)
+## Phase 2 Reading Order (current review)
 
-1. [`product/ProductPrinciples.md`](product/ProductPrinciples.md) — **the constitution**: two pillars, thirteen principles
-2. [`product/Vision.md`](product/Vision.md) — the world we want; the time-awareness category
-3. [`product/Mission.md`](product/Mission.md) — what we do and how we work
-4. [`product/ProblemStatement.md`](product/ProblemStatement.md) — the problem, restated as design requirements
-5. [`product/TargetAudience.md`](product/TargetAudience.md) — segments, priorities, non-audience
-6. [`product/Personas.md`](product/Personas.md) — Maya, Daniel, Priya, Tomás — and the constraints they enforce
-7. [`product/BehavioralPsychology.md`](product/BehavioralPsychology.md) — the applied model behind every surface
-8. [`product/ProductGoals.md`](product/ProductGoals.md) — goal hierarchy with pre-decided conflicts
-9. [`product/MVPDefinition.md`](product/MVPDefinition.md) — **the binding MVP scope contract**
-10. [`product/OutOfScope.md`](product/OutOfScope.md) — three exclusion tiers + scope-creep tripwires
-11. [`product/FeatureRoadmap.md`](product/FeatureRoadmap.md) — horizons with evidence gates, not dates
-12. [`product/CompetitiveAnalysis.md`](product/CompetitiveAnalysis.md) — positioning, defense, watchlist
-13. [`product/UserResearchHypothesis.md`](product/UserResearchHypothesis.md) — 15 hypotheses, 4 research waves
-14. [`product/Risks.md`](product/Risks.md) — 11 product risks with signals and owners
-15. [`product/SuccessMetrics.md`](product/SuccessMetrics.md) — action-not-attention measurement contract
+Foundations first, then surfaces, then the lifetime view:
+
+1. [`ux/DesignPrinciples.md`](ux/DesignPrinciples.md) — twelve UX principles implementing the constitution
+2. [`ux/BehaviorChangeModel.md`](ux/BehaviorChangeModel.md) — **the formalized Wake Loop** every UX decision maps to *(added per review)*
+3. [`ux/InformationArchitecture.md`](ux/InformationArchitecture.md) — surfaces, six screens, object model, illegal states
+4. [`ux/Navigation.md`](ux/Navigation.md) — the deliberately trivial navigation model
+5. [`ux/UserFlows.md`](ux/UserFlows.md) — ten canonical flows with budgets and edge cases
+6. [`ux/Onboarding.md`](ux/Onboarding.md) — five decisions, sixty seconds, zero permissions
+7. [`ux/Widgets.md`](ux/Widgets.md) — concept exploration; **"Day Dots" recommended** (decision requested)
+8. [`ux/NotificationStrategy.md`](ux/NotificationStrategy.md) — the exhaustive notification inventory + respectful-silence spec
+9. [`ux/ContentSystem.md`](ux/ContentSystem.md) — **the structured behavioral content system** (expanded per review)
+10. [`ux/Microcopy.md`](ux/Microcopy.md) — voice contracts, terminology law, edge-state copy
+11. [`ux/Accessibility.md`](ux/Accessibility.md) — the multi-sensory time contract; launch requirements
+12. [`ux/EmotionalDesign.md`](ux/EmotionalDesign.md) — per-moment emotional specification
+13. [`ux/BehavioralDesign.md`](ux/BehavioralDesign.md) — friction budgets, defaults, anti-habituation, graduation design
+14. [`ux/EmotionalJourney.md`](ux/EmotionalJourney.md) — install → autonomy progression *(added per review)*
+15. [`ux/UserSuccessDefinition.md`](ux/UserSuccessDefinition.md) — success from the user's side *(added per review)*
+16. [`ux/AntiGoals.md`](ux/AntiGoals.md) — eight outcomes we must not cause *(added per review)*
+17. [`ux/WireframeDescriptions.md`](ux/WireframeDescriptions.md) — textual wireframes for every screen and surface
+18. [`ux/FutureUXIdeas.md`](ux/FutureUXIdeas.md) — the parking lot
+
+Voice naming continues in parallel (round 2:
+[`research/ToneNamingExploration.md`](research/ToneNamingExploration.md) §5)
+without blocking UX work; final label ratification deadline is end of
+Phase 5.
+
+## Phase 1 (approved)
+
+Start at [`product/ProductPrinciples.md`](product/ProductPrinciples.md)
+(the constitution), then [`product/MVPDefinition.md`](product/MVPDefinition.md)
+(the binding scope contract). Full set in `docs/product/`.
 
 ## Phase 0 (approved)
 
