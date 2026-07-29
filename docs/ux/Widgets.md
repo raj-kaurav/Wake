@@ -221,3 +221,9 @@ variation comes from the content line rotation (ContentSystem §4) and
 subtle seasonal/landmark accents (S7 mornings may tint the first dot — a
 design-system decision later). Any variation must never make the glance
 slower (D2 outranks novelty).
+
+## 9. Widget Evolution Program (pointer)
+
+Day Dots is **Default V1**, not permanent identity (D-006). Formal
+program, candidate pipeline, and pluggable-renderer architecture:
+`../architecture/WidgetEvolutionProgram.md`.

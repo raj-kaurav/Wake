@@ -2,24 +2,19 @@
 
 > **Product philosophy:** Make time felt. Make starting small.
 
-Wake is a **time awareness app**: it makes today feel finite and starting
-feel two minutes small. It is deliberately not positioned as a productivity,
-todo, or anti-procrastination app — anti-procrastination is the outcome, not
-the category.
-
-This repository follows a phase-gated, documentation-first product
-development lifecycle. **No production code is written until the relevant
-documentation has been reviewed and approved by the product owner.**
+Wake is a **time awareness app**. Canonical terminology:
+[`product/LanguageSystem.md`](product/LanguageSystem.md). Decision history:
+[`product/ProductDecisionLog.md`](product/ProductDecisionLog.md).
 
 ## Phase Gate Status
 
 | Phase | Scope | Directory | Status |
 |-------|-------|-----------|--------|
-| **Phase 0** | Discovery & Research | `docs/research/` | ✅ Approved with revisions (revisions applied) |
-| **Phase 1** | Product Documentation | `docs/product/` | ✅ Approved |
-| **Phase 2** | UX Documentation | `docs/ux/` | ✅ Revised per review — **awaiting re-approval** |
-| Phase 3 | Technical Planning | `docs/architecture/` | ⛔ Blocked on Phase 2 approval *(BehaviorArchitecture.md bridge already drafted)* |
-| Phase 4 | Engineering Standards | `docs/engineering/` | ⛔ Blocked |
+| **Phase 0** | Discovery & Research | `docs/research/` | ✅ Approved (frozen) |
+| **Phase 1** | Product Documentation | `docs/product/` | ✅ Approved (frozen) |
+| **Phase 2** | UX Documentation | `docs/ux/` | ✅ Approved (frozen) |
+| **Phase 3** | Technical Planning | `docs/architecture/` | ✅ Complete — **awaiting approval** |
+| Phase 4 | Engineering Standards | `docs/engineering/` | ⛔ Blocked on Phase 3 approval |
 | Phase 5 | Design System | `docs/design-system/` | ⛔ Blocked |
 | Phase 6 | Development Rules | `.cursor/` | ⛔ Blocked |
 | Phase 7 | Implementation Plan | `docs/plan/` | ⛔ Blocked |
@@ -27,64 +22,35 @@ documentation has been reviewed and approved by the product owner.**
 
 ### Gate rules
 
-1. Each phase ends with a review. Work on the next phase does not start until
-   the product owner approves the current one.
-2. Feedback is incorporated by revising the documents in place; revisions are
-   noted in each phase's changelog (see `research/README.md` for Phase 0's).
-3. Decisions made in an approved phase are binding on later phases. Changing
-   an approved decision requires reopening the earlier document, not silently
-   diverging.
-4. `product/ProductPrinciples.md` is the project constitution: permanent,
-   binding on every phase, amendable only by explicit product-owner decision.
+1. Each phase ends with review/approval before the next begins.
+2. `product/ProductPrinciples.md` — constitution.
+3. `architecture/BehaviorArchitecture.md` — behavioral API contract (D-007);
+   every technical proposal must map to transition, ritual, emotion, metric,
+   anti-goal, principle.
+4. `product/LanguageSystem.md` — canonical terms (MicroStart, VoiceA/B, Ritual).
 
-## Phase 2 Reading Order (current review)
+## Phase 3 Reading Order (current review)
 
-Foundations first, then surfaces, then the lifetime view:
+1. [`product/LanguageSystem.md`](product/LanguageSystem.md) — glossary freeze
+2. [`product/ProductDecisionLog.md`](product/ProductDecisionLog.md) — D-001…D-012
+3. [`architecture/BehaviorArchitecture.md`](architecture/BehaviorArchitecture.md) — authoritative contract
+4. [`architecture/Architecture.md`](architecture/Architecture.md) — overview + thesis
+5. [`architecture/AppStructure.md`](architecture/AppStructure.md) — modules + creep firewall
+6. [`architecture/StateManagement.md`](architecture/StateManagement.md) — MicroStartSession + FreshStartFlag
+7. [`architecture/OfflineStrategy.md`](architecture/OfflineStrategy.md)
+8. [`architecture/WidgetArchitecture.md`](architecture/WidgetArchitecture.md) + [`WidgetEvolutionProgram.md`](architecture/WidgetEvolutionProgram.md)
+9. [`architecture/NotificationArchitecture.md`](architecture/NotificationArchitecture.md)
+10. [`architecture/BackgroundServices.md`](architecture/BackgroundServices.md)
+11. [`architecture/Permissions.md`](architecture/Permissions.md)
+12. [`architecture/AccessibilitySupport.md`](architecture/AccessibilitySupport.md)
+13. [`architecture/Localization.md`](architecture/Localization.md)
+14. [`architecture/Performance.md`](architecture/Performance.md) · [`BatteryOptimization.md`](architecture/BatteryOptimization.md)
+15. [`architecture/Privacy.md`](architecture/Privacy.md) · [`Security.md`](architecture/Security.md)
+16. [`architecture/Analytics.md`](architecture/Analytics.md) — MicroStart event dictionary
+17. [`architecture/FutureArchitecture.md`](architecture/FutureArchitecture.md)
 
-1. [`ux/DesignPrinciples.md`](ux/DesignPrinciples.md) — twelve UX principles implementing the constitution
-2. [`ux/BehaviorChangeModel.md`](ux/BehaviorChangeModel.md) — **the formalized Wake Loop** every UX decision maps to *(added per review)*
-3. [`ux/InformationArchitecture.md`](ux/InformationArchitecture.md) — surfaces, six screens, object model, illegal states
-4. [`ux/Navigation.md`](ux/Navigation.md) — the deliberately trivial navigation model
-5. [`ux/UserFlows.md`](ux/UserFlows.md) — ten canonical flows with budgets and edge cases
-6. [`ux/Onboarding.md`](ux/Onboarding.md) — five decisions, sixty seconds, zero permissions
-7. [`ux/Widgets.md`](ux/Widgets.md) — **Day Dots = Default V1** (not long-term-final); long-term concepts for beta
-8. [`ux/NotificationStrategy.md`](ux/NotificationStrategy.md) — the exhaustive notification inventory + respectful-silence spec
-9. [`ux/ContentSystem.md`](ux/ContentSystem.md) — Content Engine + **Emotional Temperature** metadata
-10. [`ux/Microcopy.md`](ux/Microcopy.md) — voice contracts, terminology law, edge-state copy
-11. [`ux/Accessibility.md`](ux/Accessibility.md) — multi-sensory + **cognitive accessibility**
-12. [`ux/EmotionalDesign.md`](ux/EmotionalDesign.md) — per-moment emotional specification
-13. [`ux/BehavioralDesign.md`](ux/BehavioralDesign.md) — friction budgets, defaults, anti-habituation, graduation design
-14. [`ux/EmotionalJourney.md`](ux/EmotionalJourney.md) — canonical arc; **Relief before Confidence**
-15. [`ux/UserSuccessDefinition.md`](ux/UserSuccessDefinition.md) — success from the user's side
-16. [`ux/AntiGoals.md`](ux/AntiGoals.md) — anti-goals + **mandatory procrastination-misuse review**
-17. [`ux/EmptyStates.md`](ux/EmptyStates.md) — empty/return/denied states *(review addition)*
-18. [`ux/Rituals.md`](ux/Rituals.md) — behavioral ritual framework *(review addition)*
-19. [`ux/Terminology.md`](ux/Terminology.md) — **MicroStart** internal canonical term *(review addition)*
-20. [`ux/WireframeDescriptions.md`](ux/WireframeDescriptions.md) — textual wireframes
-21. [`ux/FutureUXIdeas.md`](ux/FutureUXIdeas.md) — parking lot
-22. [`architecture/BehaviorArchitecture.md`](architecture/BehaviorArchitecture.md) — UX↔engineering bridge matrix *(review addition)*
+## Prior phases (frozen)
 
-Voice naming continues in parallel (round 3:
-[`research/ToneNamingExploration.md`](research/ToneNamingExploration.md) §6)
-without renaming the repository; Coach/Friend remain temporary display
-labels. Final ratification deadline: end of Phase 5.
-
-## Phase 1 (approved)
-
-Start at [`product/ProductPrinciples.md`](product/ProductPrinciples.md)
-(the constitution), then [`product/MVPDefinition.md`](product/MVPDefinition.md)
-(the binding scope contract). Full set in `docs/product/`.
-
-## Phase 0 (approved)
-
-Start at [`research/README.md`](research/README.md) — overview, key
-findings, and the revision changelog. The single best summary document is
-[`research/ProductOpportunityReport.md`](research/ProductOpportunityReport.md).
-
-## A Note on Evidence
-
-The research documents cite published behavioral-science literature by author
-and year. Citations reflect the research team's working knowledge of the
-literature; before any claim is used in marketing copy or app content, it must
-be verified against the primary source. Claims that are contested or based on
-weaker evidence are explicitly flagged as such in the documents.
+- Phase 2: `docs/ux/` — start at DesignPrinciples + BehaviorChangeModel
+- Phase 1: `docs/product/` — ProductPrinciples + MVPDefinition
+- Phase 0: `docs/research/` — ProductOpportunityReport

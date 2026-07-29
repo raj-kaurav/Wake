@@ -64,9 +64,14 @@ canonical internal name for the mechanic.
 | **Pulse** | UX + internal | Scheduled awareness notification |
 | **Speak Time** | UX + internal | Spoken clock feature |
 | **Intention** | UX + internal | Optional single string |
-| **Voice** | UX + internal | Challenging/nurturing register (`coach`/`friend` ids) |
+| **Voice** | UX copy | "voice" / temporary display labels |
+| **VoiceA / VoiceB** | Internal IDs | Challenging / nurturing — see `../product/LanguageSystem.md` |
 | **Content Engine** | Internal | Behavioral content system |
+| **Ritual** | Internal capability | See LanguageSystem; not exposed in MVP UI |
 | **Notice / Offer / …** | Behavior model | Wake Loop transitions |
+
+**Supersession:** Prefer `../product/LanguageSystem.md` for all new work.
+This file remains the MicroStart audit record (D-004).
 
 ## 5. Scope of rename in this revision
 

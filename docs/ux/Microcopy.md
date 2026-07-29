@@ -73,7 +73,7 @@ also governs *interface* copy (buttons, settings, errors).
 | Scheduled awareness notification | **pulse** | reminder, alert, nudge (in UI copy) |
 | Spoken clock feature | **Speak Time** | voice assistant, announcements |
 | The one stored string | **intention** | task, todo, goal |
-| Voice choice | **voice** | mode, personality, theme |
+| Voice choice | **voice** (display) / **VoiceA\|VoiceB** (IDs) | mode, personality, theme |
 | Wake window | **your day** (UI) / wake window (docs) | active hours, schedule |
 | Stopping a timer early | **stop** | give up, quit, cancel (post-20 s) |
 | The mortality pack (future) | **The Stoic** | death clock, memento mori (user-facing) |

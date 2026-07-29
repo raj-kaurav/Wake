@@ -1,21 +1,17 @@
 # Wake
 
-A **time awareness app**: it makes today feel finite and starting feel two
-minutes small. Built on behavioral psychology rather than task management —
-anti-procrastination is the outcome, not the category.
+A **time awareness app**: make today feel finite and starting feel two
+minutes small.
 
 > **Product philosophy:** Make time felt. Make starting small.
 
 ## Status
 
-**Documentation-first development.** No production code exists yet, by
-design. The project follows a phase-gated lifecycle in which each
-documentation phase is reviewed and approved before the next begins — and
-implementation begins only after all documentation phases are approved.
+Documentation-first. No production code yet.
 
-- **Phase 0 — Discovery & Research:** ✅ approved with revisions (applied)
-- **Phase 1 — Product Documentation:** ✅ approved
-- **Phase 2 — UX Documentation:** revised per review, awaiting re-approval
-- **Phase 3:** not started (BehaviorArchitecture bridge drafted only)
-- **Start here:** [`docs/README.md`](docs/README.md) — phase-gate tracker and reading order
-- **Key documents:** [`docs/product/ProductPrinciples.md`](docs/product/ProductPrinciples.md) — the project constitution · [`docs/research/ProductOpportunityReport.md`](docs/research/ProductOpportunityReport.md) — the Phase 0 opportunity report
+- **Phases 0–2:** ✅ approved and frozen
+- **Phase 3 — Technical Planning:** complete, awaiting approval
+- **Canonical language:** [`docs/product/LanguageSystem.md`](docs/product/LanguageSystem.md)
+- **Decision log:** [`docs/product/ProductDecisionLog.md`](docs/product/ProductDecisionLog.md)
+- **Behavioral contract:** [`docs/architecture/BehaviorArchitecture.md`](docs/architecture/BehaviorArchitecture.md)
+- **Index:** [`docs/README.md`](docs/README.md)

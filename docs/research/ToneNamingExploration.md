@@ -152,8 +152,9 @@ choice persist; only the display string changes).
 - **Final ratification deadline: end of Phase 5** (design system), before
   store-listing assets and the launch corpus's choice-screen copy are
   frozen. Labels are display strings until then by architecture
-  (`../ux/ContentSystem.md` voice dimension uses stable ids `coach` /
-  `friend` regardless of display name).
+  (`../ux/ContentSystem.md` voice dimension uses stable ids `VoiceA` /
+  `VoiceB` per Phase 2 final ratification / `LanguageSystem.md`; display
+  labels remain temporary).
 
 ---
 
@@ -209,7 +210,8 @@ rename before Phase 5.
 ### 6.4 Standing rules while exploration continues
 
 1. User-facing copy may say "voice" without naming until choice screen.
-2. Docs and code keep ids `coach` / `friend`.
+2. Docs and code keep ids **`VoiceA` / `VoiceB`** (challenging /
+   nurturing). Legacy `coach`/`friend` ids in older drafts are superseded.
 3. Display strings are a single localization key each — swap cost is one
    string change, not a refactor.
 4. Future pack voices (Stoic) are energy-or-tradition names, never

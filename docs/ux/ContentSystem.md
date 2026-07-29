@@ -17,7 +17,7 @@ decision) — there is no browsable content surface (P5).
 
 ### 1.1 Content types (the behavioral job)
 
-| Type | Job (loop transition served — `BehaviorChangeModel.md`) | Example (Coach) | Example (Friend) |
+| Type | Job (loop transition served — `BehaviorChangeModel.md`) | Example (VoiceA) | Example (VoiceB) |
 |---|---|---|---|
 | **T1 Reframe** | Shrink the imagined task (competing-loop intercept 1) | "You don't need ready. Ready comes after." | "It's allowed to start badly." |
 | **T2 Time fact** | Raise time salience, granular & finite (→1 NOTICE) | "This week is 40% done." | "6 hours of today are still yours." |
@@ -46,9 +46,10 @@ types keeps the schema uniform.)
 
 ### 1.3 Dimensions (metadata every line carries)
 
-- **voice:** coach | friend | (future: stoic, …) — every line belongs to
-  exactly one voice; no "shared neutral" lines except Speak Time's clock
-  utterance.
+- **voice:** `VoiceA` | `VoiceB` | (future pack voices) — stable IDs per
+  `../product/LanguageSystem.md`. Display labels (temporary: Coach /
+  Friend) resolve at the UI edge only. No "shared neutral" lines except
+  Speak Time's clock utterance.
 - **framing:** opportunity | depletion | neutral (H2 experiment axis;
   depletion lines gated to Coach by default pending H2).
 - **intensity:** 1-calm | 2-standard | 3-kinetic — selection respects the
@@ -111,13 +112,13 @@ job the line does (type), or when it is delivered (slot/context).
 ## 2. Line Schema (canonical record)
 
 ```yaml
-id: t1-coach-0042            # type-voice-serial, immutable
+id: t1-voicea-0042           # type-voice-serial, immutable
 type: T1                     # taxonomy §1.1
-voice: coach
+voice: VoiceA                # VoiceA | VoiceB — never display labels
 slots: [S2, S4]              # where it may serve
 framing: neutral
 intensity: 2
-emotional_temperature: focused  # §1.4
+emotional_temperature: focused  # §1.4 — MANDATORY
 landmark_eligible: false
 locale: en
 text: "You don't need ready. Ready comes after."
@@ -130,6 +131,10 @@ status: active               # draft | active | retired
 version_introduced: content-v1
 notes: "CBT-derived reframe; see EvidenceBasedInterventions §3.2"
 ```
+
+**Mandatory metadata (D-011):** every line must include Voice, Content
+Type, Context/slots, Intensity, and Emotional Temperature — even when MVP
+selection ignores adaptive temperature rules.
 
 Rules: `text` is final display copy (no runtime templating except time
 values in T2 — the only interpolation allowed, e.g. `{remaining_hours}`);
