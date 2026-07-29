@@ -104,3 +104,53 @@ Rationale against the criteria:
   accurate, less extensible.
 - Naming of the philosophy pack voice (**The Stoic**) travels with this
   decision.
+
+---
+
+## 5. Round 2 — Parallel Exploration (during Phase 2; does not block UX work)
+
+Per the Phase 1 review direction, naming continues as a parallel design
+exploration. All Phase 2 UX documents use **The Coach / The Friend** as
+provisional labels; every artifact treats the label as a swappable string
+(the voice *contract* is the stable object — `Microcopy.md` §2–3 defines
+voices by contract, not by name).
+
+### 5.1 What Round 1 settled vs. left open
+
+Settled: the **"Voices" system frame** (personas over adjectives) survives
+all Phase 2 design work well — "choose who talks to you about time" turned
+out to be the natural onboarding framing (`../ux/Onboarding.md` screen 2).
+Open: whether *Coach/Friend* are the best two personas, and how names
+should be *presented* at choice time.
+
+### 5.2 Additional persona candidates surfaced by Phase 2 work
+
+| Pair | Notes |
+|---|---|
+| The Coach / The Friend (incumbent) | Strong priors; "Coach" carries slight gym/fitness scent; "Friend" is warm and plain |
+| **The Trainer / The Companion** | "Trainer" sharpens the challenge promise but narrows to fitness harder than Coach; "Companion" is Finch-adjacent vocabulary — risk of wellness-app association |
+| **The Straight Talker / The Encourager** | Maximally descriptive; clunky as product nouns; poor localization |
+| **The Spark / The Steady** (persona-ized Set B) | Evocative, ungendered, ownable; abstract enough to *require* the preview — which we mandate anyway. Promoted to a serious alternate |
+| Named human personas ("Sam / Ren") | Rejected: names imply characters/chatbots (violates the no-ego rule, `MicrocopyStrategy.md` §2.2) and gender/culture assumptions |
+
+### 5.3 Presentation insight (matters more than the label)
+
+Wave 2 prototype testing (H6) should test **sample-lines-first
+presentation**: the choice screen can lead with each voice's three sample
+lines and reveal the *name* second (or even after selection). If
+comprehension holds, the label's weight drops further — users choose the
+*voice they heard*, not the noun. This would also let labels be refined
+post-launch without re-onboarding anyone (the contract, corpus, and
+choice persist; only the display string changes).
+
+### 5.4 Decision timeline
+
+- **Now → Phase 2 review:** provisional labels stand; no UX work blocked.
+- **Wave 1/2 research:** name-comprehension + connotation probes ride
+  along (zero added sessions); Spark/Steady tested as alternate against
+  Coach/Friend.
+- **Final ratification deadline: end of Phase 5** (design system), before
+  store-listing assets and the launch corpus's choice-screen copy are
+  frozen. Labels are display strings until then by architecture
+  (`../ux/ContentSystem.md` voice dimension uses stable ids `coach` /
+  `friend` regardless of display name).
