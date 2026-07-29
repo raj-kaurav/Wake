@@ -1,18 +1,23 @@
-# Anti-Procrastination App — Documentation
+# Wake — Documentation
 
-> **Product philosophy:** Make time felt, not tracked.
+> **Product philosophy:** Make time felt. Make starting small.
 
-This repository follows a phase-gated, documentation-first product development
-lifecycle. **No production code is written until the relevant documentation has
-been reviewed and approved by the product owner.**
+Wake is a **time awareness app**: it makes today feel finite and starting
+feel two minutes small. It is deliberately not positioned as a productivity,
+todo, or anti-procrastination app — anti-procrastination is the outcome, not
+the category.
+
+This repository follows a phase-gated, documentation-first product
+development lifecycle. **No production code is written until the relevant
+documentation has been reviewed and approved by the product owner.**
 
 ## Phase Gate Status
 
 | Phase | Scope | Directory | Status |
 |-------|-------|-----------|--------|
-| **Phase 0** | Discovery & Research | `docs/research/` | ✅ Complete — **awaiting approval** |
-| Phase 1 | Product Documentation | `docs/product/` | ⛔ Blocked on Phase 0 approval |
-| Phase 2 | UX Documentation | `docs/ux/` | ⛔ Blocked |
+| **Phase 0** | Discovery & Research | `docs/research/` | ✅ Approved with revisions (revisions applied) |
+| **Phase 1** | Product Documentation | `docs/product/` | ✅ Complete — **awaiting approval** |
+| Phase 2 | UX Documentation | `docs/ux/` | ⛔ Blocked on Phase 1 approval |
 | Phase 3 | Technical Planning | `docs/architecture/` | ⛔ Blocked |
 | Phase 4 | Engineering Standards | `docs/engineering/` | ⛔ Blocked |
 | Phase 5 | Design System | `docs/design-system/` | ⛔ Blocked |
@@ -25,26 +30,36 @@ been reviewed and approved by the product owner.**
 1. Each phase ends with a review. Work on the next phase does not start until
    the product owner approves the current one.
 2. Feedback is incorporated by revising the documents in place; revisions are
-   noted in each document's changelog section where material.
-3. Decisions made in an approved phase are binding on later phases. Changing an
-   approved decision requires reopening the earlier document, not silently
+   noted in each phase's changelog (see `research/README.md` for Phase 0's).
+3. Decisions made in an approved phase are binding on later phases. Changing
+   an approved decision requires reopening the earlier document, not silently
    diverging.
+4. `product/ProductPrinciples.md` is the project constitution: permanent,
+   binding on every phase, amendable only by explicit product-owner decision.
 
-## Phase 0 Reading Order
+## Phase 1 Reading Order (current review)
 
-Start with the research overview, which summarizes the findings and the
-decisions we recommend:
+1. [`product/ProductPrinciples.md`](product/ProductPrinciples.md) — **the constitution**: two pillars, thirteen principles
+2. [`product/Vision.md`](product/Vision.md) — the world we want; the time-awareness category
+3. [`product/Mission.md`](product/Mission.md) — what we do and how we work
+4. [`product/ProblemStatement.md`](product/ProblemStatement.md) — the problem, restated as design requirements
+5. [`product/TargetAudience.md`](product/TargetAudience.md) — segments, priorities, non-audience
+6. [`product/Personas.md`](product/Personas.md) — Maya, Daniel, Priya, Tomás — and the constraints they enforce
+7. [`product/BehavioralPsychology.md`](product/BehavioralPsychology.md) — the applied model behind every surface
+8. [`product/ProductGoals.md`](product/ProductGoals.md) — goal hierarchy with pre-decided conflicts
+9. [`product/MVPDefinition.md`](product/MVPDefinition.md) — **the binding MVP scope contract**
+10. [`product/OutOfScope.md`](product/OutOfScope.md) — three exclusion tiers + scope-creep tripwires
+11. [`product/FeatureRoadmap.md`](product/FeatureRoadmap.md) — horizons with evidence gates, not dates
+12. [`product/CompetitiveAnalysis.md`](product/CompetitiveAnalysis.md) — positioning, defense, watchlist
+13. [`product/UserResearchHypothesis.md`](product/UserResearchHypothesis.md) — 15 hypotheses, 4 research waves
+14. [`product/Risks.md`](product/Risks.md) — 11 product risks with signals and owners
+15. [`product/SuccessMetrics.md`](product/SuccessMetrics.md) — action-not-attention measurement contract
 
-1. [`research/README.md`](research/README.md) — overview, key findings, recommendations
-2. [`research/ProcrastinationScience.md`](research/ProcrastinationScience.md) — what procrastination actually is
-3. [`research/EvidenceBasedInterventions.md`](research/EvidenceBasedInterventions.md) — what demonstrably helps
-4. [`research/WhyProductivityAppsFail.md`](research/WhyProductivityAppsFail.md) — failure modes of existing tools
-5. [`research/CompetitiveLandscape.md`](research/CompetitiveLandscape.md) — app-by-app review
-6. [`research/MarketGaps.md`](research/MarketGaps.md) — where the openings are
-7. [`research/FeatureIdeaAssessment.md`](research/FeatureIdeaAssessment.md) — evidence-based critique of the six proposed features
-8. [`research/EthicalConsiderations.md`](research/EthicalConsiderations.md) — ethics, incl. the "Brutal mode" problem
-9. [`research/ProductOpportunityReport.md`](research/ProductOpportunityReport.md) — the go/no-go recommendation
-10. [`research/OpenQuestions.md`](research/OpenQuestions.md) — assumptions that still need validation
+## Phase 0 (approved)
+
+Start at [`research/README.md`](research/README.md) — overview, key
+findings, and the revision changelog. The single best summary document is
+[`research/ProductOpportunityReport.md`](research/ProductOpportunityReport.md).
 
 ## A Note on Evidence
 
