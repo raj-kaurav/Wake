@@ -132,9 +132,12 @@ version_introduced: content-v1
 notes: "CBT-derived reframe; see EvidenceBasedInterventions §3.2"
 ```
 
-**Mandatory metadata (D-011):** every line must include Voice, Content
-Type, Context/slots, Intensity, and Emotional Temperature — even when MVP
-selection ignores adaptive temperature rules.
+**Mandatory metadata (D-011, reaffirmed 2026-09-28):** every content item
+includes Content ID, Voice ID (`VoiceA`|`VoiceB`), Content Type, Context
+(slots), Intensity, Emotional Temperature, Landmark eligibility, Copy,
+Review Status, Locale, and Version. Adaptive delivery is not required for
+MVP. The schema must support it later without a destructive migration.
+Display labels (Coach/Friend) are not stored on the line.
 
 Rules: `text` is final display copy (no runtime templating except time
 values in T2 — the only interpolation allowed, e.g. `{remaining_hours}`);

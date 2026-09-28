@@ -200,3 +200,63 @@ Every Phase 3+ architectural choice of consequence should add an entry.
 - **Evidence:** EthicalConsiderations §3; Wohl 2010; Sirois & Pychyl 2013.
 - **Consequences:** Binding checklist; VoiceA never means contempt.
 - **Review Trigger:** Line-level harm signals (R4); H7 failures.
+
+### D-013 — Phase 3 architecture approved and frozen
+- **Date:** 2026-09-28
+- **Context:** Phase 3 review accepted the architecture subject to explicit guardrails.
+- **Decision:** Phase 3 is **APPROVED / FROZEN**. Phase 4 is **NOT STARTED**. No implementation. Creep firewall remains authoritative (no Task, Streak, History, Social, Account, Leaderboard, Achievement, or engagement-score modules without a future constitutional decision).
+- **Alternatives Considered:** Start Phase 4 immediately; lock a framework now.
+- **Rationale:** Protect behavioral philosophy from technical entropy before engineering standards.
+- **Evidence:** Phase 3 review text; existing architecture set.
+- **Consequences:** Gate updated; further architecture changes require a new decision entry.
+- **Review Trigger:** Phase 4 authorization.
+
+### D-014 — Framework remains spike-gated
+- **Date:** 2026-09-28
+- **Context:** Three client shapes are viable; widget and background behavior are the risk.
+- **Decision:** Candidates A (KMP + native UI), B (dual-native), and C (cross-platform UI + native bridges) stay **OPEN** until H13–H15 evidence. Do not choose for familiarity or prototype speed. Criteria are ordered in `FrameworkDecision.md`.
+- **Alternatives Considered:** Lock KMP, Flutter, or dual-native now.
+- **Rationale:** Platform honesty and Speak Time/widget fidelity outrank speed.
+- **Evidence:** None yet — spikes not run (`Spikes.md`).
+- **Consequences:** Phase 4 must not assume a language. Contracts stay framework-agnostic.
+- **Review Trigger:** Completed H13, H14, and H15 Decision sections.
+
+### D-015 — Android Speak Time: least intrusive mechanism; FGS not assumed
+- **Date:** 2026-09-28
+- **Context:** A foreground service is possible but may be unnecessary and more intrusive.
+- **Decision:** H15 determines whether periodic Speak Time works without an FGS. Use the least intrusive reliable mechanism. If exact delivery is impossible, degrade honestly. An FGS requires a later decision recording why, activation, duration, notification, battery, visibility, failures, and fallback.
+- **Alternatives Considered:** Mandate FGS; drop Speak Time on Android.
+- **Rationale:** P8 platform honesty; avoid battery and policy cost without evidence.
+- **Evidence:** Pending H15.
+- **Consequences:** `BackgroundServices.md` default path has no FGS.
+- **Review Trigger:** H15 evidence filled.
+
+### D-016 — Analytics: pseudonymous install token under local-first constraints
+- **Date:** 2026-09-28
+- **Context:** WSU and graduation learning need some telemetry; core behavior must not.
+- **Decision:** Approve a locally generated, non-identifying, resettable install token only as specified in `AnalyticsPrivacy.md`. No accounts for analytics. No PII. Core loop works when analytics or network is unavailable. Prompted vs self-initiated starts are measured and never shown as a user score.
+- **Alternatives Considered:** Account-based analytics; advertising IDs; no telemetry.
+- **Rationale:** Product learning without surveillance or engagement scores (P5, P11, A4).
+- **Evidence:** SuccessMetrics; Phase 3 review §7–9.
+- **Consequences:** `Analytics.md` event names aligned to behavioral vocabulary.
+- **Review Trigger:** Any proposal to show independence or streaks to users.
+
+### D-017 — MicroStart, Day Dots, BehaviorArchitecture reaffirmed at Phase 3 freeze
+- **Date:** 2026-09-28
+- **Context:** Approval round asked these to be recorded again as canonical.
+- **Decision:** Reaffirm D-004 (**MicroStart** internal term), D-006 (**Day Dots** = Default V1 widget, not permanent; renderer stays pluggable), and D-007 (**BehaviorArchitecture** is the intake contract: six mappings or the proposal is incomplete).
+- **Alternatives Considered:** Re-open naming or widget identity at Phase 3.
+- **Rationale:** Stability of the behavioral API through technical planning.
+- **Evidence:** D-004, D-006, D-007; WidgetEvolutionProgram.
+- **Consequences:** No rename; no geometry in the domain model.
+- **Review Trigger:** Phase 5 voice labels (display only); widget beta that beats Day Dots on H1/H8.
+
+### D-018 — Engineering preserves philosophy, not complexity
+- **Date:** 2026-09-28
+- **Context:** Risk of infrastructure added "for later."
+- **Decision:** Adopt: "Engineering exists to preserve the behavioral philosophy, not to create opportunities for technical complexity." Complexity firewall and anti-goal firewall in `Architecture.md` are binding.
+- **Alternatives Considered:** Build scalable backend and engagement infrastructure early.
+- **Rationale:** Phase 3 mission.
+- **Evidence:** Phase 3 review §§18–20, 25.
+- **Consequences:** New subsystems need an MVP behavior, a simplicity check, and an anti-goal answer.
+- **Review Trigger:** A proposal whose only justification is future scale.
