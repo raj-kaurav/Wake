@@ -14,9 +14,9 @@ Wake is a **time awareness app**. Canonical terminology:
 | **Phase 1** | Product Documentation | `docs/product/` | ✅ Approved (frozen) |
 | **Phase 2** | UX Documentation | `docs/ux/` | ✅ Approved / Frozen |
 | **Phase 3** | Technical Planning | `docs/architecture/` | ✅ Approved / Frozen |
-| Phase 4 | Engineering Standards | `docs/engineering/` | Not started |
-| Phase 5 | Design System | `docs/design-system/` | ⛔ Blocked |
-| Phase 6 | Development Rules | `.cursor/` | ⛔ Blocked |
+| **Phase 4** | Engineering Standards | `docs/engineering/` | ✅ Draft complete — **awaiting approval** |
+| Phase 5 | Design System | `docs/design-system/` | Not started — **not authorized** |
+| Phase 6 | Further development rules | `.cursor/` beyond Phase 4 | Not started |
 | Phase 7 | Implementation Plan | `docs/plan/` | ⛔ Blocked |
 | Phase 8 | Implementation | `app/` (TBD) | ⛔ Blocked |
 
@@ -51,7 +51,14 @@ Wake is a **time awareness app**. Canonical terminology:
 18. [`architecture/Analytics.md`](architecture/Analytics.md) — behavioral event dictionary
 19. [`architecture/FutureArchitecture.md`](architecture/FutureArchitecture.md)
 
-Phase 4 has not started. Implementation has not started.
+## Phase 4 (current review)
+
+Index: [`engineering/README.md`](engineering/README.md). Cursor rules:
+[`.cursor/rules/`](../.cursor/rules/).
+
+Phase 4 does not authorize implementation. Phase 5 is not authorized.
+Framework choice, H15, voice display names, and long-term widget identity
+remain open.
 
 ## Prior phases (frozen)
 
