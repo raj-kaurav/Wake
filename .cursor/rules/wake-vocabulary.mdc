@@ -1,0 +1,20 @@
+---
+description: Canonical Wake vocabulary for code, events, and docs.
+alwaysApply: true
+---
+
+# Vocabulary
+
+Use `docs/product/LanguageSystem.md`.
+
+- Internal behavior: `MicroStart` (not a generic task or session).
+- Voices in code and content: `VoiceA`, `VoiceB` only. Coach/Friend are temporary display strings.
+- Return state: `FreshStart` / `FreshStartFlag` (boolean).
+- Awareness notification: `AwarenessPulse`.
+- Spoken clock: `SpeakTime`.
+- Content system: `ContentEngine`.
+- Events: `MicroStartCompleted`, `PromptedStart`, `SelfInitiatedStart`, `SpeakTimeDelivered`, `FreshStartPresented`. Never `TaskCompleted`, `StreakUpdated`, `ProductivityScore`, `DailyGoal`, `AchievementUnlocked`.
+
+User-facing copy may say Start, Start Now, Begin, or Just Start without renaming code.
+
+Do not expose the word "ritual" in MVP UI. Rituals are internal names.

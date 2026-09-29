@@ -1,0 +1,35 @@
+---
+description: Wake engineering operating system. Read before any code or architecture change.
+alwaysApply: true
+---
+
+# Wake — protect the behavioral philosophy
+
+Protect the behavioral philosophy from technical entropy. Engineering preserves that philosophy; it does not invent complexity or product behavior.
+
+The product succeeds when the user leaves the app and starts. Longer sessions are a warning, not a goal.
+
+## Before changing code or architecture
+
+1. Read the relevant docs: `docs/product/ProductPrinciples.md`, `docs/product/LanguageSystem.md`, `docs/architecture/BehaviorArchitecture.md`, and the engineering standard that matches the change (`docs/engineering/README.md`).
+2. Map behavioral work to: behavior transition, ritual, emotional goal, success metric, anti-goal, product principle. If you cannot, stop and say the proposal is incomplete.
+3. If a change conflicts with a frozen product or architecture decision, flag the conflict. Do not silently edit `docs/product/ProductDecisionLog.md` or weaken `BehaviorArchitecture.md`.
+
+## Do not
+
+- Implement the app, screens, services, schemas, widgets, Speak Time, or notifications unless a later phase explicitly authorizes implementation.
+- Add modules or types for Task, Streak, History, Social, Account, Leaderboard, Achievement, ProductivityScore, or DailyGoal.
+- Add missed-day counters. `FreshStartFlag` is a boolean.
+- Add re-engagement, "we miss you," streak, or guilt notifications.
+- Make analytics, network, or accounts required for MicroStart, Awareness, Fresh Start, Speak Time, widgets, notifications, or content.
+- Log intention text, install tokens, or inferred psychological states.
+- Assume Android/iOS parity or exact Speak Time.
+- Choose a framework or an Android foreground service while H13–H15 are open (`docs/architecture/FrameworkDecision.md`, `docs/architecture/Spikes.md`).
+- Rename `MicroStart`, `VoiceA`, or `VoiceB`. Display labels are not domain ids.
+- Treat AI output as authority over the written architecture.
+
+## Dependency direction
+
+Domain ← application ← infrastructure/platform ← UI.
+
+Domain must not import UI, analytics, platform SDKs, network clients, or storage implementations.

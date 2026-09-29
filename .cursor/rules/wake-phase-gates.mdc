@@ -1,0 +1,13 @@
+---
+description: Phase gates. Do not implement the app or start later phases without authorization.
+alwaysApply: true
+---
+
+# Phase gates
+
+- Phases 0–3 are approved and frozen.
+- Phase 4 is engineering standards and governance. It is not permission to build the app.
+- Do not start Phase 5 (design system), implementation planning, or production code until the product owner authorizes that phase.
+- Leave these open: client framework, Android Speak Time mechanism (H15), voice display names, long-term widget identity.
+- Spike results become decisions only when `docs/architecture/Spikes.md` has Evidence and Decision filled and the decision log is updated. Opinion is not evidence.
+- When architecture changes, update the architecture doc and add a Product Decision Log entry in the same change. Do not let code become the spec.
